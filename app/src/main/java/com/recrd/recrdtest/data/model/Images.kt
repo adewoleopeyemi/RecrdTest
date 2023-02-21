@@ -19,7 +19,7 @@ data class CatResponseData(
 )
 
 
-internal fun ImagesResponseData.toDomain() = ImagesResponse(
-    breeds.map { Cat(it.id, it.url) }
+internal fun CatResponseData.toDomain() = Cat(
+    id, url
 )
 

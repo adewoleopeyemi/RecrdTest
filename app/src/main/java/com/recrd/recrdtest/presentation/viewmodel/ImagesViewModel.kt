@@ -1,5 +1,6 @@
 package com.recrd.recrdtest.presentation.viewmodel
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -39,7 +40,7 @@ class ImagesViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             getAllImagesUseCase.execute(apiKey, state.curPage).fold(
                 onSuccess = {
-                    state = state.copy(curPage = state.curPage+1, images = it.breeds, loading = false)
+                    state = state.copy(curPage = state.curPage+1, images =state.images + it, loading = false)
                 },
                 onFailure = {
                     state = state.copy(loading = false, error = it.message)
