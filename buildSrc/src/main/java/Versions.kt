@@ -1,4 +1,5 @@
 object Versions {
+    const val coil = "2.1.0"
     const val buildToolsVersion = "3.3.1"
     const val compose_ui_version = "1.2.0"
     const val retrofit_version = "2.9.0"

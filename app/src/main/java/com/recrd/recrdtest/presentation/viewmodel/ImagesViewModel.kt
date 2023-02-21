@@ -35,8 +35,16 @@ class ImagesViewModel(
     }
 
     private fun fetchImages(apiKey: String) {
+        state = state.copy(loading = true)
         viewModelScope.launch(Dispatchers.IO) {
-
+            getAllImagesUseCase.execute(apiKey, state.curPage).fold(
+                onSuccess = {
+                    state = state.copy(curPage = state.curPage+1, images = it.breeds, loading = false)
+                },
+                onFailure = {
+                    state = state.copy(loading = false, error = it.message)
+                }
+            )
         }
     }
 

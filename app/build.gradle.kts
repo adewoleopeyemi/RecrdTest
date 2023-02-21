@@ -63,20 +63,28 @@ dependencies {
     implementation(Deps.androidx_compose_livedata)
     implementation(Deps.androidx_compose_layout)
     implementation(Deps.androidx_compose_material_icons_core)
-    implementation(Deps.compose)
     implementation(Deps.androidx_compose_constraintlayout)
     implementation(Deps.androidx_compose_tooling)
     implementation(Deps.androidx_compose_ui)
     implementation(Deps.compose_material)
+    implementation(Deps.androidx_compose_navigation)
+    implementation(Deps.android_compose_coil)
+    implementation(Deps.compose_coil_svg)
+
+    //testing
     testImplementation(Deps.junit)
     androidTestImplementation(Deps.ext_junit)
     androidTestImplementation(Deps.espresso)
     androidTestImplementation(Deps.compose_ui_test)
-    debugImplementation(Deps.compose_ui_test_manifest)
+    testImplementation(Deps.mockito)
+    testImplementation(Deps.mockk)
+    androidTestImplementation(Deps.arch_testing)
+    testImplementation(Deps.arch_testing)
+    testImplementation(Deps.test_coroutines)
+    testImplementation(Deps.google_truth)
 
     //retrofit
     implementation(Deps.retrofit)
-    implementation(Deps.gson_converter)
     implementation(Deps.moshi)
     implementation(Deps.moshi_kotlin)
 

@@ -36,25 +36,24 @@ object Deps {
     val ext_junit by lazy { "androidx.test.ext:junit:1.1.5" }
     val espresso by lazy { "androidx.test.espresso:espresso-core:3.5.1" }
     val compose_ui_test by lazy { "androidx.compose.presentation:presentation-test-junit4:${Versions.compose_ui_version}" }
-    val compose_ui_test_manifest by lazy { "androidx.compose.presentation:presentation-test-manifest:${Versions.compose_ui_version}" }
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit_version}"
     const val gson_converter=  "com.squareup.retrofit2:converter-gson:$${Versions.retrofit_version}"
     const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit_version}"
     const val moshi_kotlin = "com.squareup.moshi:moshi-kotlin:1.12.0"
+    const val mockito = "org.mockito:mockito-core:3.9.0"
+    const val mockk = "io.mockk:mockk:1.12.0"
+    const val arch_testing =  "androidx.arch.core:core-testing:2.1.0"
+    const val google_truth = "com.google.truth:truth:1.0.1"
+    const val test_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
 
-
-    const val androidx_compose_runtime = "androidx.compose.runtime:runtime:1.2.0"
-    const val androidx_compose_constraint_layout =
-        "androidx.constraintlayout:constraintlayout-compose:1.0.0"
     const val androidx_compose_navigation = "androidx.navigation:navigation-compose:2.4.2"
-    const val androidx_compose_material = "androidx.compose.material:material:1.2.0"
     const val androidx_compose_ui = "androidx.compose.ui:ui:1.2.0"
     const val androidx_compose_tooling = "androidx.compose.ui:ui-tooling:1.1.1"
     const val androidx_compose_constraintlayout =
         "androidx.constraintlayout:constraintlayout-compose:1.0.0"
-    const val androidx_compose_accompanist_systemui =
-        "com.google.accompanist:accompanist-systemuicontroller:0.24.9-beta"
 
+    const val android_compose_coil = "io.coil-kt:coil-compose:${Versions.coil}"
+    const val compose_coil_svg = "io.coil-kt:coil-svg:${Versions.coil}"
 
     val koin_core = "io.insert-koin:koin-core:${Versions.koin}"
     val koin_test = "io.insert-koin:koin-test:${Versions.koin}"
