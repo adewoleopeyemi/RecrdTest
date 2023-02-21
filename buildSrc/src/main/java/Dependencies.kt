@@ -39,4 +39,9 @@ object Deps {
     val compose_ui_test by lazy { "androidx.compose.presentation:presentation-test-junit4:${Versions.compose_ui_version}" }
     val compose_ui_tooling by lazy {"androidx.compose.presentation:presentation-tooling:${Versions.compose_ui_version}"}
     val compose_ui_test_manifest by lazy { "androidx.compose.presentation:presentation-test-manifest:${Versions.compose_ui_version}" }
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit_version}"
+    const val gson_converter=  "com.squareup.retrofit2:converter-gson:$${Versions.retrofit_version}"
+    const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit_version}"
+    const val moshi_kotlin = "com.squareup.moshi:moshi-kotlin:1.12.0"
+
 }

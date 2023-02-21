@@ -72,4 +72,10 @@ dependencies {
     androidTestImplementation(Deps.compose_ui_test)
     debugImplementation(Deps.compose_ui_tooling)
     debugImplementation(Deps.compose_ui_test_manifest)
+
+    //retrofit
+    implementation(Deps.retrofit)
+    implementation(Deps.gson_converter)
+    implementation(Deps.moshi)
+    implementation(Deps.moshi_kotlin)
 }
