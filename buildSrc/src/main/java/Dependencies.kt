@@ -32,16 +32,34 @@ object Deps {
         "com.google.android.material:compose-theme-adapter:1.1.7"
     val junit by lazy { "junit:junit:${Versions.jUnit}" }
     val compose by lazy { "androidx.compose.presentation:presentation:${Versions.compose_ui_version}"}
-    val compose_ui_preview_tooling by lazy { "androidx.compose.presentation:presentation-tooling-preview:${Versions.compose_ui_version}" }
     val compose_material by lazy { "androidx.compose.material:material:1.2.0" }
     val ext_junit by lazy { "androidx.test.ext:junit:1.1.5" }
     val espresso by lazy { "androidx.test.espresso:espresso-core:3.5.1" }
     val compose_ui_test by lazy { "androidx.compose.presentation:presentation-test-junit4:${Versions.compose_ui_version}" }
-    val compose_ui_tooling by lazy {"androidx.compose.presentation:presentation-tooling:${Versions.compose_ui_version}"}
     val compose_ui_test_manifest by lazy { "androidx.compose.presentation:presentation-test-manifest:${Versions.compose_ui_version}" }
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit_version}"
     const val gson_converter=  "com.squareup.retrofit2:converter-gson:$${Versions.retrofit_version}"
     const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit_version}"
     const val moshi_kotlin = "com.squareup.moshi:moshi-kotlin:1.12.0"
+
+
+    const val androidx_compose_runtime = "androidx.compose.runtime:runtime:1.2.0"
+    const val androidx_compose_constraint_layout =
+        "androidx.constraintlayout:constraintlayout-compose:1.0.0"
+    const val androidx_compose_navigation = "androidx.navigation:navigation-compose:2.4.2"
+    const val androidx_compose_material = "androidx.compose.material:material:1.2.0"
+    const val androidx_compose_ui = "androidx.compose.ui:ui:1.2.0"
+    const val androidx_compose_tooling = "androidx.compose.ui:ui-tooling:1.1.1"
+    const val androidx_compose_constraintlayout =
+        "androidx.constraintlayout:constraintlayout-compose:1.0.0"
+    const val androidx_compose_accompanist_systemui =
+        "com.google.accompanist:accompanist-systemuicontroller:0.24.9-beta"
+
+
+    val koin_core = "io.insert-koin:koin-core:${Versions.koin}"
+    val koin_test = "io.insert-koin:koin-test:${Versions.koin}"
+    val koin_junit4 = "io.insert-koin:koin-test-junit4:${Versions.koin}"
+    val koin_android = "io.insert-koin:koin-android:${Versions.koin}"
+    val koin_compose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"
 
 }

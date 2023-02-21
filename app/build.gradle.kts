@@ -64,13 +64,14 @@ dependencies {
     implementation(Deps.androidx_compose_layout)
     implementation(Deps.androidx_compose_material_icons_core)
     implementation(Deps.compose)
-    implementation(Deps.compose_ui_preview_tooling)
+    implementation(Deps.androidx_compose_constraintlayout)
+    implementation(Deps.androidx_compose_tooling)
+    implementation(Deps.androidx_compose_ui)
     implementation(Deps.compose_material)
     testImplementation(Deps.junit)
     androidTestImplementation(Deps.ext_junit)
     androidTestImplementation(Deps.espresso)
     androidTestImplementation(Deps.compose_ui_test)
-    debugImplementation(Deps.compose_ui_tooling)
     debugImplementation(Deps.compose_ui_test_manifest)
 
     //retrofit
@@ -78,4 +79,10 @@ dependencies {
     implementation(Deps.gson_converter)
     implementation(Deps.moshi)
     implementation(Deps.moshi_kotlin)
+
+
+    //DI
+    implementation(Deps.koin_core)
+    implementation(Deps.koin_android)
+    implementation(Deps.koin_compose)
 }

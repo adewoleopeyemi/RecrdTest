@@ -4,5 +4,6 @@ object Versions {
     const val retrofit_version = "2.9.0"
     const val gradlePlugin = "4.2.1"
     const val kotlin = "1.7.0"
+    const val koin = "3.2.0"
     const val jUnit = "4.13.2"
 }
