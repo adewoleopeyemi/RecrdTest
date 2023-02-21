@@ -31,12 +31,12 @@ object Deps {
     const val androidx_compose_theme_adapter =
         "com.google.android.material:compose-theme-adapter:1.1.7"
     val junit by lazy { "junit:junit:${Versions.jUnit}" }
-    val compose by lazy { "androidx.compose.ui:ui:${Versions.compose_ui_version}"}
-    val compose_ui_preview_tooling by lazy { "androidx.compose.ui:ui-tooling-preview:${Versions.compose_ui_version}" }
+    val compose by lazy { "androidx.compose.presentation:presentation:${Versions.compose_ui_version}"}
+    val compose_ui_preview_tooling by lazy { "androidx.compose.presentation:presentation-tooling-preview:${Versions.compose_ui_version}" }
     val compose_material by lazy { "androidx.compose.material:material:1.2.0" }
     val ext_junit by lazy { "androidx.test.ext:junit:1.1.5" }
     val espresso by lazy { "androidx.test.espresso:espresso-core:3.5.1" }
-    val compose_ui_test by lazy { "androidx.compose.ui:ui-test-junit4:${Versions.compose_ui_version}" }
-    val compose_ui_tooling by lazy {"androidx.compose.ui:ui-tooling:${Versions.compose_ui_version}"}
-    val compose_ui_test_manifest by lazy { "androidx.compose.ui:ui-test-manifest:${Versions.compose_ui_version}" }
+    val compose_ui_test by lazy { "androidx.compose.presentation:presentation-test-junit4:${Versions.compose_ui_version}" }
+    val compose_ui_tooling by lazy {"androidx.compose.presentation:presentation-tooling:${Versions.compose_ui_version}"}
+    val compose_ui_test_manifest by lazy { "androidx.compose.presentation:presentation-test-manifest:${Versions.compose_ui_version}" }
 }

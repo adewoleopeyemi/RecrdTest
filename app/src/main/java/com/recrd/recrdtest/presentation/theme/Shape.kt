@@ -1,4 +1,4 @@
-package com.recrd.recrdtest.ui.theme
+package com.recrd.recrdtest.presentation.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

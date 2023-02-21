@@ -1,4 +1,4 @@
-package com.recrd.recrdtest.ui.theme
+package com.recrd.recrdtest.presentation.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
