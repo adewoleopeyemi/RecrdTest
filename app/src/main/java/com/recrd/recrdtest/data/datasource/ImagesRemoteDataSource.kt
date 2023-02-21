@@ -1,8 +1,7 @@
 package com.recrd.recrdtest.data.datasource
 
-import com.recrd.recrdtest.data.model.CatResponseData
-import com.recrd.recrdtest.data.model.ImagesResponseData
+import com.recrd.recrdtest.data.model.CatData
 
 interface ImagesRemoteDataSource {
-    suspend fun getImages(apiKey:String, page: Int): List<CatResponseData>
+    suspend fun getImages(apiKey:String, page: Int): List<CatData>
 }

@@ -1,16 +1,12 @@
 package com.recrd.recrdtest.data.repository
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.recrd.recrdtest.data.datasource.FakeDataSource
 import com.recrd.recrdtest.data.datasource.ImagesRemoteDataSource
-import com.recrd.recrdtest.data.datasource.ImagesRemoteDataSourceImpl
-import com.recrd.recrdtest.data.model.CatResponseData
-import com.recrd.recrdtest.data.model.ImagesResponseData
-import com.recrd.recrdtest.domain.common.Response
+import com.recrd.recrdtest.data.model.CatData
 import com.recrd.recrdtest.domain.models.Cat
 import com.recrd.recrdtest.domain.repository.ImagesRepository
-import io.mockk.Answer
 import io.mockk.coEvery
-import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -35,10 +31,7 @@ class ImagesRepositoryImplTest{
 
     @Before
     fun setUp(){
-        imagesRemoteDataSource = mockk()
-        coEvery { imagesRemoteDataSource.getImages("abc", 1) } returns ImagesResponseData(
-            breeds = listOf(CatResponseData("1", "www.google.com"))
-        )
+        imagesRemoteDataSource =FakeDataSource()
         imagesRepository = ImagesRepositoryImpl(imagesRemoteDataSource)
         Dispatchers.setMain(dispatcher)
 
@@ -50,11 +43,10 @@ class ImagesRepositoryImplTest{
         runBlocking {
             imagesRepository.getImages("1", 1).fold(
                 onSuccess = {
-                    cats = it.breeds.toMutableList()
-                    println("Cat is from success ${it.breeds.toMutableList()}")
+                    cats = it.toMutableList()
                 },
                 onFailure = {
-                    println("Cat is ${it.message}")
+                    println("There was an ${it.message}")
                 }
             )
             delay(3000)

@@ -1,17 +1,16 @@
 package com.recrd.recrdtest.data.model
 
 import com.recrd.recrdtest.domain.models.Cat
-import com.recrd.recrdtest.domain.models.ImagesResponse
 import com.squareup.moshi.Json
 
 
 data class ImagesResponseData(
     @Json(name= "breeds")
-    val breeds: List<CatResponseData>
+    val breeds: List<CatData>
 )
 
 
-data class CatResponseData(
+data class CatData(
     @Json(name= "id")
     val id:String,
     @Json(name="url")
@@ -19,7 +18,7 @@ data class CatResponseData(
 )
 
 
-internal fun CatResponseData.toDomain() = Cat(
+internal fun CatData.toDomain() = Cat(
     id, url
 )
 
