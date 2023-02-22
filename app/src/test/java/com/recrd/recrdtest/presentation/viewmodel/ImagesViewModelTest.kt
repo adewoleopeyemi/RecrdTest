@@ -7,6 +7,7 @@ import com.recrd.recrdtest.data.repository.ImagesRepositoryImpl
 import com.recrd.recrdtest.domain.repository.ImagesRepository
 import com.recrd.recrdtest.domain.usecases.GetAllImagesUseCase
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.StandardTestDispatcher
@@ -18,6 +19,7 @@ import org.junit.rules.TestRule
 import org.junit.Assert.*
 
 
+@OptIn(ExperimentalCoroutinesApi::class)
 class ImagesViewModelTest{
     private lateinit var imagesRemoteDataSource: ImagesRemoteDataSource
     private lateinit var imagesRepository: ImagesRepository
