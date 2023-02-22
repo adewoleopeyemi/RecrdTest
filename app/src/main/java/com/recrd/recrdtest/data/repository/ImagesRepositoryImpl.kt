@@ -5,7 +5,6 @@ import com.recrd.recrdtest.data.datasource.ImagesRemoteDataSourceImpl
 import com.recrd.recrdtest.data.model.toDomain
 import com.recrd.recrdtest.domain.common.Response
 import com.recrd.recrdtest.domain.models.Cat
-import com.recrd.recrdtest.domain.models.ImagesResponse
 import com.recrd.recrdtest.domain.repository.ImagesRepository
 
 class ImagesRepositoryImpl(
